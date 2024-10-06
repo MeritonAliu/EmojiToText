@@ -9,3 +9,4 @@
 /Users/toni/development/EmojiToText/obj/Release/net8.0/refint/EmojiToText.dll
 /Users/toni/development/EmojiToText/obj/Release/net8.0/EmojiToText.pdb
 /Users/toni/development/EmojiToText/obj/Release/net8.0/ref/EmojiToText.dll
+/Users/toni/development/EmojiToText/obj/Release/net8.0/EmojiToText.sourcelink.json

@@ -10,10 +10,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("EmojiToText")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Meriton Aliu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e5184d164e5766df47de5fb1e45c2896228c45e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2780fccfddee98ef1e1eeb3c76b525ef2b654c9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmojiToText")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmojiToText")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

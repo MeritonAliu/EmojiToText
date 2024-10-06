@@ -3,14 +3,16 @@
   <metadata>
     <id>EmojiToText</id>
     <version>1.0.0</version>
-    <authors>EmojiToText</authors>
+    <authors>Meriton Aliu</authors>
+    <readme>README.md</readme>
     <description>Package Description</description>
-    <repository type="git" commit="4e5184d164e5766df47de5fb1e45c2896228c45e" />
+    <repository type="git" commit="2780fccfddee98ef1e1eeb3c76b525ef2b654c9a" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="/Users/toni/development/EmojiToText/bin/Release/net8.0/EmojiToText.dll" target="lib/net8.0/EmojiToText.dll" />
+    <file src="/Users/toni/development/EmojiToText/README.md" target="/README.md" />
   </files>
 </package>
