@@ -1,0 +1,11 @@
+/Users/toni/development/EmojiToText/bin/Release/net8.0/EmojiToText.deps.json
+/Users/toni/development/EmojiToText/bin/Release/net8.0/EmojiToText.dll
+/Users/toni/development/EmojiToText/bin/Release/net8.0/EmojiToText.pdb
+/Users/toni/development/EmojiToText/obj/Release/net8.0/EmojiToText.GeneratedMSBuildEditorConfig.editorconfig
+/Users/toni/development/EmojiToText/obj/Release/net8.0/EmojiToText.AssemblyInfoInputs.cache
+/Users/toni/development/EmojiToText/obj/Release/net8.0/EmojiToText.AssemblyInfo.cs
+/Users/toni/development/EmojiToText/obj/Release/net8.0/EmojiToText.csproj.CoreCompileInputs.cache
+/Users/toni/development/EmojiToText/obj/Release/net8.0/EmojiToText.dll
+/Users/toni/development/EmojiToText/obj/Release/net8.0/refint/EmojiToText.dll
+/Users/toni/development/EmojiToText/obj/Release/net8.0/EmojiToText.pdb
+/Users/toni/development/EmojiToText/obj/Release/net8.0/ref/EmojiToText.dll
