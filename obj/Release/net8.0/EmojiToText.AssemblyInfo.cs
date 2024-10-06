@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Meriton Aliu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2780fccfddee98ef1e1eeb3c76b525ef2b654c9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2f24e8be10fc6bc0d8047e334dd30cf0e61c123")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmojiToText")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmojiToText")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

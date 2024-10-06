@@ -4,15 +4,18 @@
     <id>EmojiToText</id>
     <version>1.0.0</version>
     <authors>Meriton Aliu</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
     <readme>README.md</readme>
     <description>Package Description</description>
-    <repository type="git" commit="2780fccfddee98ef1e1eeb3c76b525ef2b654c9a" />
+    <repository type="git" commit="c2f24e8be10fc6bc0d8047e334dd30cf0e61c123" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="/Users/toni/development/EmojiToText/bin/Release/net8.0/EmojiToText.dll" target="lib/net8.0/EmojiToText.dll" />
-    <file src="/Users/toni/development/EmojiToText/README.md" target="/README.md" />
+    <file src="/Users/toni/development/EmojiToText/LICENSE" target="LICENSE" />
+    <file src="/Users/toni/development/EmojiToText/README.md" target="README.md" />
   </files>
 </package>
