@@ -23,6 +23,8 @@ public static class EmojiConverter
 
     public static string ToText(string input)
     {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
         foreach (var emoji in emojiDictionary)
         {
             input = input.Replace(emoji.Key, emoji.Value);
@@ -32,6 +34,8 @@ public static class EmojiConverter
 
     public static string ToEmoji(string input)
     {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
         foreach (var emoji in emojiDictionary)
         {
             input = input.Replace(emoji.Value, emoji.Key);
