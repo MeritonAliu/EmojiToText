@@ -13,7 +13,7 @@
     <ItemGroup>
       <None Include="../LICENSE" Pack="true" PackagePath=""/>
       <None Include="../README.md" Pack="true" PackagePath=""/>
-      <None Update="data-by-emoji.json">
+      <None Update="../src/data-by-emoji.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
