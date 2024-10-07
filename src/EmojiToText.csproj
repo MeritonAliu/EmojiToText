@@ -10,19 +10,18 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
-    <ItemGroup>
-      <None Include="../LICENSE" Pack="true" PackagePath=""/>
-      <None Include="../README.md" Pack="true" PackagePath=""/>
-      <None Update="../src/data-by-emoji.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
+  <ItemGroup>
+    <None Include="../LICENSE" Pack="true" PackagePath=""/>
+    <None Include="../README.md" Pack="true" PackagePath=""/>
+  </ItemGroup>
 
-    <ItemGroup>
-      <ContentWithTargetPath Include="../src/data-by-emoji.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        <TargetPath>data-by-emoji.json</TargetPath>
-      </ContentWithTargetPath>
-      <None Include="../src/data-by-emoji.json" />
-    </ItemGroup>
+  <ItemGroup>
+    <None Include="../src/data-by-emoji.json" Pack="true" PackagePath="contentFiles/any/any/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="../src/data-by-emoji.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
