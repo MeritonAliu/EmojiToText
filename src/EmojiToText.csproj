@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Authors>Meriton Aliu</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -16,14 +16,13 @@
       <None Update="../src/data-by-emoji.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-    <None Update="/src/data-by-emoji.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="../src/data-by-emoji.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="/src/data-by-emoji.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ContentWithTargetPath Include="../src/data-by-emoji.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <TargetPath>data-by-emoji.json</TargetPath>
+      </ContentWithTargetPath>
+      <None Include="../src/data-by-emoji.json" />
     </ItemGroup>
 </Project>
