@@ -10,7 +10,14 @@ public static class EmojiConverter
 
     static EmojiConverter()
     {
-        var json = File.ReadAllText("./data-by-emoji.json");
+        string jsonFilePath = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
+
+        if (!File.Exists(jsonFilePath))
+        {
+            throw new FileNotFoundException($"Could not find file '{jsonFilePath}'.");
+        }
+
+        string json = File.ReadAllText(jsonFilePath);
         var emojiDictionaryFromJson = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json)!;
 
         emojiDictionary = new Dictionary<string, string>();

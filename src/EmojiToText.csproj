@@ -16,5 +16,8 @@
       <None Update="../src/data-by-emoji.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+    <None Update="/src/data-by-emoji.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     </ItemGroup>
 </Project>
