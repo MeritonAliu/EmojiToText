@@ -21,6 +21,9 @@
 
 echo 'Husky pre-commit git hook!'
 
+echo 'Format Project'
+dotnet format
+
 echo 'Clean Project'
 dotnet clean
 

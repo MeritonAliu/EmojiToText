@@ -6,36 +6,36 @@ namespace EmojiToText;
 
 public static class EmojiConverter
 {
-  private static Dictionary<string, string> emojiDictionary;
+    private static Dictionary<string, string> emojiDictionary;
 
-  static EmojiConverter()
-  {
-    var json = File.ReadAllText("./data-by-emoji.json");
-    var emojiDictionaryFromJson = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json)!;
-
-    emojiDictionary = new Dictionary<string, string>();
-    foreach (var item in emojiDictionaryFromJson)
+    static EmojiConverter()
     {
-      var emojiName = item.Value.GetProperty("name").GetString();
-      emojiDictionary.Add(item.Key, emojiName!);
-    }
-  }
+        var json = File.ReadAllText("./data-by-emoji.json");
+        var emojiDictionaryFromJson = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json)!;
 
-  public static string ToText(string input)
-  {
-    foreach (var emoji in emojiDictionary)
-    {
-      input = input.Replace(emoji.Key, emoji.Value);
+        emojiDictionary = new Dictionary<string, string>();
+        foreach (var item in emojiDictionaryFromJson)
+        {
+            var emojiName = item.Value.GetProperty("name").GetString();
+            emojiDictionary.Add(item.Key, emojiName!);
+        }
     }
-    return input;
-  }
 
-  public static string ToEmoji(string input)
-  {
-    foreach (var emoji in emojiDictionary)
+    public static string ToText(string input)
     {
-      input = input.Replace(emoji.Value, emoji.Key);
+        foreach (var emoji in emojiDictionary)
+        {
+            input = input.Replace(emoji.Key, emoji.Value);
+        }
+        return input;
     }
-    return input;
-  }
+
+    public static string ToEmoji(string input)
+    {
+        foreach (var emoji in emojiDictionary)
+        {
+            input = input.Replace(emoji.Value, emoji.Key);
+        }
+        return input;
+    }
 }
