@@ -5,7 +5,7 @@
 - Convert emojis to descriptive text.
 - convert text back into emojis.
 - XUnit tests are implemented
-- Wide range of emojis from the latest Unicode standart.
+- Supports the latest Unicode version 16.0
 
 ## Installation
 
