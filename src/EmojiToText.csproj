@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -18,6 +18,11 @@
   <ItemGroup>
     <None Include="../src/data-by-emoji.json" Pack="true" PackagePath="contentFiles/any/any/" />
   </ItemGroup>
+
+	<Content Include="../src/data-by-emoji.json">
+    <PackageCopyToOutput>true</PackageCopyToOutput>
+	</Content>
+
 
   <ItemGroup>
     <None Update="../src/data-by-emoji.json">
