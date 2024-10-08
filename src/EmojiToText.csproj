@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <Authors>Meriton Aliu</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -13,11 +13,6 @@
   <ItemGroup>
     <None Include="../LICENSE" Pack="true" PackagePath=""/>
     <None Include="../README.md" Pack="true" PackagePath=""/>
-    <None Update="../src/data-by-emoji.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-          <Pack>true</Pack>
-        <PackagePath>contentFiles/any/net8.0/</PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>
