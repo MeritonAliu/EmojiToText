@@ -10,10 +10,12 @@ public static class EmojiConverter
 
     static EmojiConverter()
     {
-        string devJsonFilePath = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
-        string nugetJsonFilePath = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
-        string jsonFilePath = File.Exists(devJsonFilePath) ? devJsonFilePath : nugetJsonFilePath;
+        string jsonFilePath = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
 
+        if (!File.Exists(jsonFilePath))
+        {
+            jsonFilePath = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "net8.0", "data-by-emoji.json");
+        }
         if (!File.Exists(jsonFilePath))
         {
             throw new FileNotFoundException($"Could not find file '{jsonFilePath}'.");
