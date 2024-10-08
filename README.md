@@ -2,11 +2,14 @@
 
 [![.NET](https://github.com/MeritonAliu/EmojiToText/actions/workflows/dotnet.yml/badge.svg)](https://github.com/MeritonAliu/EmojiToText/actions/workflows/dotnet.yml)
 [![NuGet](https://img.shields.io/nuget/v/EmojiToText.svg)](https://www.nuget.org/packages/EmojiToText/)
+[![Nuget](https://img.shields.io/nuget/dt/EmojiToText)](https://www.nuget.org/packages/EmojiToText/)
+[![License](https://img.shields.io/github/license/MeritonAliu/EmojiToText)](LICENSE)
+
 
 ## Features
 
 - Convert emojis to descriptive text.
-- convert text back into emojis.
+- Convert text back into emojis.
 - XUnit tests are implemented
 - Supports the latest Unicode version 16.0
 
@@ -73,6 +76,10 @@ To run the tests for this project, use the following command:
 ```bash
 dotnet test
 ```
+
+## Roadmap
+
+The roadmap can be fount at: [ROADMAP](ROADMAP.md)
 
 ## References
 
