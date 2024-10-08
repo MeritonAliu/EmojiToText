@@ -6,9 +6,9 @@ public static class EmojiConverter
     private static Dictionary<string, string> emojiDictionary;
     static EmojiConverter()
     {
-        var jsonFilePath = EmojiLoader.DownloadJsonFromUrl();
+        var jsonData = EmojiLoader.DownloadJsonFromUrl();
 
-        string json = File.ReadAllText(jsonFilePath);
+        string json = File.ReadAllText(jsonData);
         var emojiDictionaryFromJson = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json)!;
 
         emojiDictionary = new Dictionary<string, string>();
