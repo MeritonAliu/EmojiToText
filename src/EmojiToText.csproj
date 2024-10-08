@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
     <Authors>Meriton Aliu</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -19,10 +19,11 @@
     <None Include="../src/data-by-emoji.json" Pack="true" PackagePath="contentFiles/any/any/" />
   </ItemGroup>
 
-	<Content Include="../src/data-by-emoji.json">
-    <PackageCopyToOutput>true</PackageCopyToOutput>
-	</Content>
-
+  <ItemGroup>
+		<Content Include="../src/data-by-emoji.json">
+	    <PackageCopyToOutput>true</PackageCopyToOutput>
+		</Content>
+  </ItemGroup>
 
   <ItemGroup>
     <None Update="../src/data-by-emoji.json">
