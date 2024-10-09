@@ -16,7 +16,7 @@ In this phase of the project the focus is on basic funcionality.
 In this phase of the project the focus is on advancing the environment.
 
 - [ ] Make use of [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)
-- [ ] Make use of [gitversion](https://gitversion.net)
+- [x] ~~Make use of [gitversion](https://gitversion.net)~~
 - [ ] Make use of [docfx](https://dotnet.github.io/docfx)
 - [x] Create a `SECURITY.md` file
 - [x] Create a `CONTRIBUTING.md` file
