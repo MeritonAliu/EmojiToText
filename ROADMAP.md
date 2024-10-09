@@ -18,10 +18,10 @@ In this phase of the project the focus is on advancing the environment.
 - [ ] Make use of [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)
 - [ ] Make use of [gitversion](https://gitversion.net)
 - [ ] Make use of [docfx](https://dotnet.github.io/docfx)
-- [ ] Create a `SECURITY.md` file
-- [ ] Create a `CONTRIBUTING.md` file
-- [ ] Create a issues template
-- [ ] Create a `CODE_OF_CONDUCT.md`
+- [x] Create a `SECURITY.md` file
+- [x] Create a `CONTRIBUTING.md` file
+- [x] Create a issues template
+- [x] Create a `CODE_OF_CONDUCT.md`
 
 ## M3 - Extended funcionality
 
