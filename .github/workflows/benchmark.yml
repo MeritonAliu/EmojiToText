@@ -1,0 +1,41 @@
+name: Run Benchmarks
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - "src/EmojiConverter.cs"
+  workflow_dispatch:
+
+jobs:
+  run-benchmarks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build the project
+        run: dotnet build --configuration Release
+
+      - name: Run Benchmarks
+        run: dotnet run --project Benchmarks --configuration Release
+
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v2
+        with:
+          name: benchmark-results
+          path: |
+            BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report.html
+            BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report.csv
+            BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report-github.md
