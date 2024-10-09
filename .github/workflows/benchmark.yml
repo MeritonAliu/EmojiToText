@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.0.x"
 
@@ -36,6 +36,6 @@ jobs:
         with:
           name: benchmark-results
           path: |
-            BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report.html
-            BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report.csv
-            BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report-github.md
+            Benchmarks/BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report.html
+            Benchmarks/BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report.csv
+            Benchmarks/BenchmarkDotNet.Artifacts/results/EmojiConverterBenchmark-report-github.md
