@@ -81,10 +81,29 @@ dotnet test
 
 The roadmap can be fount at: [ROADMAP](ROADMAP.md)
 
+## Benchmarks
+
+The following benchmarks apply to the current EmojiConverter methods.
+The mutlitple benchmarks are done with 1000 emojis/texts.
+
+| Method                     | Mean      | Error    | StdDev   | Allocated |
+|--------------------------- |----------:|---------:|---------:|----------:|
+| ConvertSingleEmojiToText   |  20.46 μs | 0.332 μs | 0.198 μs |      48 B |
+| ConvertSingleTextToEmoji   |  16.62 μs | 0.041 μs | 0.024 μs |      32 B |
+| ConvertMultipleEmojiToText | 141.07 μs | 0.426 μs | 0.282 μs |         - |
+| ConvertMultipleTextToEmoji | 413.05 μs | 1.358 μs | 0.898 μs |    6025 B |
+
+If you want to benchmark it yourself, clone the repo and use:
+
+```bash
+dotnet run --project Benchmarks -c Release
+```
+
 ## References
 
 - [Emoji List](https://github.com/muan/unicode-emoji-json)
 - [XUnit](https://xunit.net)
+- [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)
 
 ## Author
 

@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget" # NuGet for .NET projects
+    directory: "/src" # Location of package manifests, assuming your .csproj is under /src
+    schedule:
+      interval: "weekly"
