@@ -16,12 +16,13 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <PackageIcon>./assets/logo.jpg</PackageIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild> <!-- Ensures packaging on build -->
+    <PackageIcon>logo.jpg</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <None Update="./assets/logo.jpg">
+    <None Update="logo.jpg">
       <Pack>True</Pack>
-      <PackagePath>./assets/</PackagePath>
+      <PackagePath>/</PackagePath>
     </None>
   </ItemGroup>
 </Project>
