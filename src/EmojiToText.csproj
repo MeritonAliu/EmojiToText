@@ -15,4 +15,13 @@
     <None Include="../README.md" Pack="true" PackagePath=""/>
   </ItemGroup>
 
+  <PropertyGroup>
+    <PackageIcon>./assets/logo.jpg</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="./assets/logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath>./assets/</PackagePath>
+    </None>
+  </ItemGroup>
 </Project>
