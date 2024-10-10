@@ -116,4 +116,4 @@ Bug reports and contributions are welcome! Feel free to submit pull requests or 
 ## License
 
 - The main project is licensed under the [MIT License](LICENSE).
-- Emoji data is governed by the [Unicode License](UNICODE_LICENSE).
+- Emoji data is governed by the [Unicode License](LICENSE_UNICODE).
