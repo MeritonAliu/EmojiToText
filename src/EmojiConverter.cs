@@ -8,19 +8,7 @@ public static class EmojiConverter
     {
         string jsonFile = EmojiLoader.getJsonOffline();
 
-        string jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
-
-        if (!File.Exists(jsonData))
-        {
-            jsonData = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
-        }
-
-        if (!File.Exists(jsonData))
-        {
-            throw new FileNotFoundException("Could not find 'data-by-emoji.json'.");
-        }
-
-        string json = File.ReadAllText(jsonData);
+        string json = File.ReadAllText(jsonFile);
         var emojiDictionaryFromJson = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json)!;
 
         emojiDictionary = new Dictionary<string, string>();
@@ -50,5 +38,82 @@ public static class EmojiConverter
             input = input.Replace(emoji.Value, emoji.Key);
         }
         return input;
+    }
+
+
+    // NEW TO TEST
+    public static bool IsSupported(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        return emojiDictionary.ContainsKey(input);
+    }
+
+    public static string RemoveEmojis(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        foreach (var emoji in emojiDictionary)
+        {
+            input = input.Replace(emoji.Key, "");
+        }
+        return input;
+    }
+
+    public static int CountEmojis(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        int count = 0;
+        foreach (var emoji in emojiDictionary)
+        {
+            if (input.Contains(emoji.Key))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static string ExtractEmojis(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        var emojis = new List<string>();
+        foreach (var emoji in emojiDictionary)
+        {
+            if (input.Contains(emoji.Key))
+            {
+                emojis.Add(emoji.Key);
+            }
+        }
+        return string.Join(" ", emojis);
+    }
+    public static bool ContainsEmoji(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        foreach (var emoji in emojiDictionary)
+        {
+            if (input.Contains(emoji.Key))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public static string AllEmojis()
+    {
+        return string.Join(" ", emojiDictionary.Keys);
+    }
+    public static string RandomEmoji()
+    {
+        return emojiDictionary.ElementAt(new Random().Next(0, emojiDictionary.Count)).Key;
+    }
+    public static string RandomEmojis(int count = 0)
+    {
+        return string.Join(" ", new Random().GetItems(emojiDictionary.Keys.ToArray(), count));
     }
 }
