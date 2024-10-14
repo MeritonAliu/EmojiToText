@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmojiToText", "src\EmojiToText.csproj", "{E977DFDD-2D7B-45E0-981C-2B791BC4A528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmojiToText.Tests", "tests\EmojiToText.Tests.csproj", "{AFEF27C8-9A56-4341-81F6-3A252A90DB42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmojiToText.Tests", "tests\EmojiToText.Tests.csproj", "{AFEF27C8-9A56-4341-81F6-3A252A90DB42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEmoji", "ConsoleEmoji\ConsoleEmoji.csproj", "{8784F022-8C78-465E-A830-8AFA5E80AE7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{AFEF27C8-9A56-4341-81F6-3A252A90DB42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFEF27C8-9A56-4341-81F6-3A252A90DB42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFEF27C8-9A56-4341-81F6-3A252A90DB42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8784F022-8C78-465E-A830-8AFA5E80AE7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8784F022-8C78-465E-A830-8AFA5E80AE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8784F022-8C78-465E-A830-8AFA5E80AE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8784F022-8C78-465E-A830-8AFA5E80AE7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
