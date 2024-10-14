@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.4.1-beta6</Version>
+    <Version>1.5.0</Version>
     <Authors>Meriton Aliu</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -21,7 +21,7 @@
       <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
   </ItemGroup>
-  
+
 
   <ItemGroup>
     <None Include="../LICENSE" Pack="true" PackagePath="" />
@@ -32,7 +32,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild> <!-- Ensures packaging on build -->
     <PackageIcon>logo.jpg</PackageIcon>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <None Update="logo.jpg">
       <Pack>True</Pack>
