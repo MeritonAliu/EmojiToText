@@ -11,19 +11,18 @@ public static class EmojiConverter
         //var jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
         //var jsonData = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
 
-        jsonData = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
+        var jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
 
-        // Check if the file exists in the NuGet-installed location
+        // Optionally, add a fallback in case the file doesn't exist where expected:
         if (!File.Exists(jsonData))
         {
-            // If not found, try looking in the base directory (for development environment)
-            jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
+            // Try checking in the contentFiles folder (just in case)
+            jsonData = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
         }
 
-        // If still not found, throw an error or handle accordingly
         if (!File.Exists(jsonData))
         {
-            throw new FileNotFoundException("Could not find 'data-by-emoji.json' in the expected locations.");
+            throw new FileNotFoundException("Could not find 'data-by-emoji.json'.");
         }
 
 
