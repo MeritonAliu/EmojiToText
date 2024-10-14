@@ -5,7 +5,6 @@
 [![Nuget](https://img.shields.io/nuget/dt/EmojiToText)](https://www.nuget.org/packages/EmojiToText/)
 [![License](https://img.shields.io/github/license/MeritonAliu/EmojiToText)](LICENSE)
 
-
 ## Features
 
 - Convert emojis to descriptive text.
@@ -117,3 +116,9 @@ Bug reports and contributions are welcome! Feel free to submit pull requests or 
 
 - The main project is licensed under the [MIT License](LICENSE).
 - Emoji data is governed by the [Unicode License](LICENSE_UNICODE).
+
+## Donation
+
+If you want to support me and my work, feel free to donate a coffee
+
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=meritonaluiu&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/meritonaluiu)
