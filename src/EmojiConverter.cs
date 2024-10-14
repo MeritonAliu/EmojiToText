@@ -11,12 +11,10 @@ public static class EmojiConverter
         //var jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
         //var jsonData = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
 
-        var jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
+        jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
 
-        // Optionally, add a fallback in case the file doesn't exist where expected:
         if (!File.Exists(jsonData))
         {
-            // Try checking in the contentFiles folder (just in case)
             jsonData = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
         }
 
@@ -24,6 +22,7 @@ public static class EmojiConverter
         {
             throw new FileNotFoundException("Could not find 'data-by-emoji.json'.");
         }
+
 
 
         string json = File.ReadAllText(jsonData);

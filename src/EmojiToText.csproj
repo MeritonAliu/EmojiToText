@@ -11,11 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="data-by-emoji.json">
-      <Pack>True</Pack>
-      <PackagePath>contentFiles\any\any\</PackagePath>
+    <Content Include="contentFiles/**/*.*" copyToOutput="true">
+      <IncludeInPackage>true</IncludeInPackage>
+      <CopyToOutput>true</CopyToOutput>
+      <BuildAction>Content</BuildAction>
+      <copyToOutput>true</copyToOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
+      <Pack>True</Pack>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
   </ItemGroup>
   
