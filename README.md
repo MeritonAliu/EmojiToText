@@ -93,16 +93,14 @@ The mutlitple benchmarks are done with 1000 emojis/texts.
 
 | Method                     | Mean      | Error    | StdDev   | Allocated |
 |--------------------------- |----------:|---------:|---------:|----------:|
-| ConvertSingleEmojiToText   |  21.01 us | 0.240 us | 0.159 us |      48 B |
-| ConvertSingleTextToEmoji   |  17.22 us | 0.131 us | 0.069 us |      32 B |
-| ConvertMultipleEmojiToText |  98.05 us | 1.621 us | 1.072 us |         - |
-| ConvertMultipleTextToEmoji | 334.73 us | 4.885 us | 3.231 us |    6025 B |
+| ConvertSingleEmojiToText   |  14.04 us | 0.111 us | 0.066 us |      48 B |
+| ConvertSingleTextToEmoji   |  10.61 us | 0.307 us | 0.203 us |      32 B |
+| ConvertMultipleEmojiToText | 172.42 us | 0.436 us | 0.288 us |         - |
+| ConvertMultipleTextToEmoji | 500.84 us | 1.132 us | 0.749 us |    6032 B |
 
 If you want to benchmark it yourself, clone the repo and use:
 
 ```bash
-dotnet run --project Benchmarks -c Release
-or 
 dotnet run --project Benchmark/EmojiToText.Benchmarks.csproj -c Release
 ```
 

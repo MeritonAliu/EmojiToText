@@ -4,10 +4,11 @@ namespace EmojiToText;
 public static class EmojiConverter
 {
     private static Dictionary<string, string> emojiDictionary;
-    public static string jsonData;
     static EmojiConverter()
     {
-        jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
+        string jsonFile = EmojiLoader.getJsonOffline();
+
+        string jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
 
         if (!File.Exists(jsonData))
         {
