@@ -39,6 +39,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Use this if your console does not support UTF-8
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
         string input = "Hello 😀!";
         string result = EmojiConverter.ToText(input);
         Console.WriteLine(result);  // Output: Hello grinning face!
@@ -55,6 +58,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Use this if your console does not support UTF-8
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
         string text = "grinning face";
         string emoji = EmojiConverter.ToEmoji(text);
         Console.WriteLine(emoji);  // Output: 😀
@@ -87,15 +93,17 @@ The mutlitple benchmarks are done with 1000 emojis/texts.
 
 | Method                     | Mean      | Error    | StdDev   | Allocated |
 |--------------------------- |----------:|---------:|---------:|----------:|
-| ConvertSingleEmojiToText   |  20.46 μs | 0.332 μs | 0.198 μs |      48 B |
-| ConvertSingleTextToEmoji   |  16.62 μs | 0.041 μs | 0.024 μs |      32 B |
-| ConvertMultipleEmojiToText | 141.07 μs | 0.426 μs | 0.282 μs |         - |
-| ConvertMultipleTextToEmoji | 413.05 μs | 1.358 μs | 0.898 μs |    6025 B |
+| ConvertSingleEmojiToText   |  21.01 us | 0.240 us | 0.159 us |      48 B |
+| ConvertSingleTextToEmoji   |  17.22 us | 0.131 us | 0.069 us |      32 B |
+| ConvertMultipleEmojiToText |  98.05 us | 1.621 us | 1.072 us |         - |
+| ConvertMultipleTextToEmoji | 334.73 us | 4.885 us | 3.231 us |    6025 B |
 
 If you want to benchmark it yourself, clone the repo and use:
 
 ```bash
 dotnet run --project Benchmarks -c Release
+or 
+dotnet run --project Benchmark/EmojiToText.Benchmarks.csproj -c Release
 ```
 
 ## References
