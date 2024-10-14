@@ -6,7 +6,15 @@ public static class EmojiConverter
     private static Dictionary<string, string> emojiDictionary;
     static EmojiConverter()
     {
-        var jsonData = EmojiLoader.DownloadJsonFromUrl();
+        //var jsonData = EmojiLoader.DownloadJsonFromUrl();
+        //var jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
+        //var jsonData = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
+
+        var jsonData = Path.Combine(AppContext.BaseDirectory, "contentFiles", "any", "any", "data-by-emoji.json");
+        if (!File.Exists(jsonData))
+        {
+            jsonData = Path.Combine(AppContext.BaseDirectory, "data-by-emoji.json");
+        }
 
         string json = File.ReadAllText(jsonData);
         var emojiDictionaryFromJson = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json)!;
