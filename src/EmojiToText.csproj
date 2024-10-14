@@ -4,18 +4,19 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.4.1-beta4</Version>
+    <Version>1.4.1-beta5</Version>
     <Authors>Meriton Aliu</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="data-by-emoji.json">
+    <Content Include="data-by-emoji.json">
       <Pack>True</Pack>
       <PackagePath>contentFiles\any\any\</PackagePath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
+    </Content>
   </ItemGroup>
   
 
