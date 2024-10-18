@@ -23,7 +23,7 @@ In this phase of the project the focus is on advancing the environment.
 - [x] Create a issues template
 - [x] Create a `CODE_OF_CONDUCT.md`
 
-## M3 - Extended funcionality [WIP]
+## M3 - Extended funcionality [DONE] v1.6.x
 
 In this phase of the project the focus is on extending the funcionality.
 

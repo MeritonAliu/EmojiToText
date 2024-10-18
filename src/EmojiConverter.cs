@@ -18,6 +18,11 @@ public static class EmojiConverter
             emojiDictionary.Add(item.Key, emojiName!);
         }
     }
+
+    public static Dictionary<string, string> GetDictionary()
+    {
+        return emojiDictionary;
+    }
     public static string ToText(string input)
     {
         ArgumentNullException.ThrowIfNull(input, nameof(input));
@@ -65,29 +70,39 @@ public static class EmojiConverter
         ArgumentNullException.ThrowIfNull(input, nameof(input));
 
         int count = 0;
+
         foreach (var emoji in emojiDictionary)
         {
-            if (input.Contains(emoji.Key))
+            int emojiLength = emoji.Key.Length;
+            int index = 0;
+
+            while ((index = input.IndexOf(emoji.Key, index)) != -1)
             {
                 count++;
+                index += emojiLength;
             }
         }
         return count;
     }
 
-    public static string ExtractEmojis(string input)
+    public static string[] ExtractEmojis(string input)
     {
         ArgumentNullException.ThrowIfNull(input, nameof(input));
 
-        var emojis = new List<string>();
+        List<string> emojis = new List<string>();
+
         foreach (var emoji in emojiDictionary)
         {
-            if (input.Contains(emoji.Key))
+            int emojiLength = emoji.Key.Length;
+            int index = 0;
+
+            while ((index = input.IndexOf(emoji.Key, index)) != -1)
             {
                 emojis.Add(emoji.Key);
+                index += emojiLength;
             }
         }
-        return string.Join(" ", emojis);
+        return emojis.ToArray();
     }
     public static bool ContainsEmoji(string input)
     {
@@ -103,10 +118,9 @@ public static class EmojiConverter
         return false;
     }
 
-
     public static string AllEmojis()
     {
-        return string.Join(" ", emojiDictionary.Keys);
+        return string.Join(",", emojiDictionary.Keys);
     }
     public static string RandomEmoji()
     {
@@ -114,6 +128,7 @@ public static class EmojiConverter
     }
     public static string RandomEmojis(int count = 0)
     {
-        return string.Join(" ", new Random().GetItems(emojiDictionary.Keys.ToArray(), count));
+
+        return string.Join("", new Random().GetItems(emojiDictionary.Keys.ToArray(), count));
     }
 }
