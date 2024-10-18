@@ -23,17 +23,18 @@ In this phase of the project the focus is on advancing the environment.
 - [x] Create a issues template
 - [x] Create a `CODE_OF_CONDUCT.md`
 
-## M3 - Extended funcionality [WIP]
+## M3 - Extended funcionality [DONE] v1.6.x
 
 In this phase of the project the focus is on extending the funcionality.
 
-- [ ] Method to check if string contains any emoji
-- [ ] Method to extract all emojis from a string
-- [ ] Method to count how many emojis there are present
-- [ ] Method to remove emojis from a string
-- [ ] Method to get a random emoji
-- [ ] Method to get all emojis
-- [ ] Method to check if an emoji is supported by the library
+- [x] Load Emoji JSON from local file instead from web
+- [x] Method to check if string contains any emoji
+- [x] Method to extract all emojis from a string
+- [x] Method to count how many emojis there are present
+- [x] Method to remove emojis from a string
+- [x] Method to get a random emoji
+- [x] Method to get all emojis
+- [x] Method to check if an emoji is supported by the library
 
 ## M3 - Advanced funcionality [WIP]
 
@@ -42,5 +43,5 @@ In this phase of the project the focus is on advancing the funcionality.
 - [ ] Make the data loading async in the background
 - [ ] Implement a suggestion system for emojis
 - [ ] Implement skin tone variations
-- [ ] Provide metadata abou emojis
+- [ ] Provide metadata about emojis
 - [ ] Enable custom emoji sets

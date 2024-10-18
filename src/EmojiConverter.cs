@@ -6,9 +6,9 @@ public static class EmojiConverter
     private static Dictionary<string, string> emojiDictionary;
     static EmojiConverter()
     {
-        var jsonData = EmojiLoader.DownloadJsonFromUrl();
+        string jsonFile = EmojiLoader.getJsonOffline();
 
-        string json = File.ReadAllText(jsonData);
+        string json = File.ReadAllText(jsonFile);
         var emojiDictionaryFromJson = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json)!;
 
         emojiDictionary = new Dictionary<string, string>();
@@ -17,6 +17,11 @@ public static class EmojiConverter
             var emojiName = item.Value.GetProperty("name").GetString();
             emojiDictionary.Add(item.Key, emojiName!);
         }
+    }
+
+    public static Dictionary<string, string> GetDictionary()
+    {
+        return emojiDictionary;
     }
     public static string ToText(string input)
     {
@@ -38,5 +43,92 @@ public static class EmojiConverter
             input = input.Replace(emoji.Value, emoji.Key);
         }
         return input;
+    }
+
+
+    // NEW TO TEST
+    public static bool IsSupported(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        return emojiDictionary.ContainsKey(input);
+    }
+
+    public static string RemoveEmojis(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        foreach (var emoji in emojiDictionary)
+        {
+            input = input.Replace(emoji.Key, "");
+        }
+        return input;
+    }
+
+    public static int CountEmojis(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        int count = 0;
+
+        foreach (var emoji in emojiDictionary)
+        {
+            int emojiLength = emoji.Key.Length;
+            int index = 0;
+
+            while ((index = input.IndexOf(emoji.Key, index)) != -1)
+            {
+                count++;
+                index += emojiLength;
+            }
+        }
+        return count;
+    }
+
+    public static string[] ExtractEmojis(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        List<string> emojis = new List<string>();
+
+        foreach (var emoji in emojiDictionary)
+        {
+            int emojiLength = emoji.Key.Length;
+            int index = 0;
+
+            while ((index = input.IndexOf(emoji.Key, index)) != -1)
+            {
+                emojis.Add(emoji.Key);
+                index += emojiLength;
+            }
+        }
+        return emojis.ToArray();
+    }
+    public static bool ContainsEmoji(string input)
+    {
+        ArgumentNullException.ThrowIfNull(input, nameof(input));
+
+        foreach (var emoji in emojiDictionary)
+        {
+            if (input.Contains(emoji.Key))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static string AllEmojis()
+    {
+        return string.Join(",", emojiDictionary.Keys);
+    }
+    public static string RandomEmoji()
+    {
+        return emojiDictionary.ElementAt(new Random().Next(0, emojiDictionary.Count)).Key;
+    }
+    public static string RandomEmojis(int count = 0)
+    {
+
+        return string.Join("", new Random().GetItems(emojiDictionary.Keys.ToArray(), count));
     }
 }

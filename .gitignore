@@ -6,6 +6,12 @@
 # dotenv files
 .env
 
+# vscode folder
+.vscode
+
+# benchmarks artifacts
+benchmarks/BenchmarkDotnet.Artifacts/
+
 # User-specific files
 *.rsuser
 *.suo

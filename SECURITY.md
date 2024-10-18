@@ -6,6 +6,8 @@ Below are the versions of the project that are actively receiving security updat
 
 | Version | Supported          |
 | ------- | ------------------ |
+| > 1.4   | :white_check_mark: |
+| 1.4.x   | :white_check_mark: |
 | 1.3.x   | :white_check_mark: |
 | 1.2.x   | :x:                |
 | < 1.2   | :x:                |

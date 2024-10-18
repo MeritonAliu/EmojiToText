@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmojiToText", "src\EmojiToText.csproj", "{E977DFDD-2D7B-45E0-981C-2B791BC4A528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmojiToText.Tests", "tests\EmojiToText.Tests.csproj", "{AFEF27C8-9A56-4341-81F6-3A252A90DB42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmojiToText.Tests", "tests\EmojiToText.Tests.csproj", "{AFEF27C8-9A56-4341-81F6-3A252A90DB42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
